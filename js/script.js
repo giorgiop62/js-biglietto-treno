@@ -8,15 +8,17 @@
 const km = prompt('Quanti km devi percorrere?');
 const età = prompt('Quanti anni hai?');
 const prezzoAlKm = 0.21;
-let risulato = (prezzoAlKm * km);
 if(età < 18){
-  ScontoMinore = (risulato * 0.2); 
+  ScontoMinore = (risulato * 0.2);
+  ScontoMinore = ScontoMinore.toFixed(2); 
   console.log(ScontoMinore);
 } else if(età >=65){
   ScontoOver = ( risulato * 0.4);
+  ScontoOver = ScontoOver.toFixed(2); 
   console.log (ScontoOver)
 }else {
-  let risulato;
+  let risulato = (prezzoAlKm * km);
+  risulato = risulato.toFixed(2); 
   console.log(risulato);
 }
 
